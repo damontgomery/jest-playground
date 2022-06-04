@@ -1,4 +1,4 @@
-export const myExportedTest = (componentName) => {
+export const coreComponentTests = (componentName) => {
   it(`Contains hello world`, () => {
     expect(
       `<${componentName}>Hello world</${componentName}>`
@@ -6,9 +6,8 @@ export const myExportedTest = (componentName) => {
       .includes('hello world'))
       .toBe(true)
   })
-}
 
-export const myExportedTestThatOnlyWorksOnCore = (componentName) => {
+  // Demonstrate a test that only works on core-component.
   it(`Is a core component`, () => {
     expect(
       `<${componentName}>Hello world</${componentName}>`
